@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Roboto } from 'next/font/google'
 
 import styles from './page.module.css'
-import logo from '@/assets/brand/logo_v1_transparent.png'
+import logo from '@/assets/logo_v1_transparent.png'
 import solanaLogo from '@/assets/solanaLogo.png'
 import { BiKey } from 'react-icons/bi'
 import { HiLightningBolt } from 'react-icons/hi'
