@@ -23,24 +23,25 @@ export default function Home() {
         <Image src={logo} alt="Caseta Logo" width={300} />
         <LandingNav />
       </HBox>
-      <h2>
+      <h2 id="features">
         A fast, secure and realiable way of making realstate transactions
         globally
       </h2>
       <Block page>
         <HBox spaced>
           <h1>Hosted on Blockchain</h1>
-          <Image
-            src={solanaLogo}
-            alt="Solana Blockchain Logo"
-            width={400}
-          />
+          <Image src={solanaLogo} alt="Solana Blockchain Logo" width={400} />
         </HBox>
       </Block>
       <Block>
-        <h1 style={{
-          marginBottom: 20,
-        }}>Get Notified When is Ready!</h1>
+        <h1
+          id="sign"
+          style={{
+            marginBottom: 20,
+          }}
+        >
+          Get Notified When is Ready!
+        </h1>
         <PreSignUp />
       </Block>
     </main>

@@ -6,10 +6,10 @@ export default function LandingNav() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="#features">Features</Link>
+          <a href="#features">Features</a>
         </li>
         <li>
-          <Link href="#sign">Sign Up</Link>
+          <a href="#sign">Sign Up</a>
         </li>
       </ul>
     </nav>
