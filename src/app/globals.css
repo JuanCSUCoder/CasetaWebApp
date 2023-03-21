@@ -12,3 +12,18 @@ body {
     width: 100vw;
     min-height: 100vh;
 }
+
+input {
+    background-color: #e72425ff;
+    border: solid 2px #ffffffff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: white;
+
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}
