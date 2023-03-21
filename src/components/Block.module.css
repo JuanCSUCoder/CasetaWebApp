@@ -1,0 +1,12 @@
+.b {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.page {
+    min-height: 70vh;
+    justify-content: center;
+}
