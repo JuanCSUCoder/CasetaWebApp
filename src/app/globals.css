@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e72425ff;
+    
+    padding: 3rem;
+    
+    width: 100%;
+    min-height: 100vh;
+}
+
+input {
+    background-color: #e72425ff;
+    border: solid 2px #ffffffff;
+    border-radius: 50px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0.5rem;
+    color: white;
+
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+}

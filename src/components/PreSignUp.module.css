@@ -1,0 +1,14 @@
+.emailbox {
+    width: 20rem;
+}
+
+.emailbox:hover {
+    background-color: rgba(255, 255, 255, 0.218);
+}
+
+.button {
+    background-color: white;
+    font-weight: bold;
+    color: #e72425ff;
+    cursor: pointer;
+}
