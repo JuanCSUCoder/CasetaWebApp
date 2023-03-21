@@ -29,3 +29,8 @@ input {
 input:focus {
     outline: none;
 }
+
+::placeholder {
+    color: white;
+    font-style: italic;
+}
