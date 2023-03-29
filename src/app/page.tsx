@@ -11,6 +11,7 @@ import PreSignUp from '@/components/PreSignUp'
 import LandingNav from '@/components/LandingNav'
 import HBox from '@/components/HBox'
 import Block from '@/components/Block'
+import RBox from '@/components/RBox'
 
 const roboto = Roboto({
   weight: "400",
@@ -21,10 +22,10 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <main className={[styles.main, roboto.className].join(" ")}>
-      <HBox>
-        <Image src={logo} alt="Caseta Logo" width={300} />
+      <RBox>
+        <Image src={logo} alt="Caseta Logo" width={250} />
         <LandingNav />
-      </HBox>
+      </RBox>
       <h2>
         A fast, secure and realiable way of making realstate transactions
         globally
