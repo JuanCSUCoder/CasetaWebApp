@@ -30,7 +30,7 @@ export default function Home() {
         globally
       </h2>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div id="features">
             <h1>Hosted on Blockchain</h1>
             <p className={styles.desc}>
@@ -39,10 +39,10 @@ export default function Home() {
             </p>
           </div>
           <Image src={solanaLogo} alt="Solana Blockchain Logo" width={400} />
-        </HBox>
+        </RBox>
       </Block>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div>
             <h1>Improved Security with Decentralization</h1>
             <p className={styles.desc}>
@@ -54,10 +54,10 @@ export default function Home() {
             </p>
           </div>
           <BiKey size={200} />
-        </HBox>
+        </RBox>
       </Block>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div>
             <h1>Just Fast Transactions</h1>
             <p className={styles.desc}>
@@ -66,7 +66,7 @@ export default function Home() {
             </p>
           </div>
           <HiLightningBolt size={200} />
-        </HBox>
+        </RBox>
       </Block>
       <Block>
         <h1
