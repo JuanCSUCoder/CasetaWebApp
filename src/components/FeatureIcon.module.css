@@ -1,0 +1,17 @@
+.responsive_img {
+    display: block;
+    width: 14rem;
+    height: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.img {
+    object-fit: contain;
+}
+
+@media screen and (min-width: 750px) {
+    .responsive_img {
+        width: 25rem;
+    }
+}
