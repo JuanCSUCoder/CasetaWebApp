@@ -27,7 +27,10 @@ export default function Home() {
         <Image src={logo} alt="Caseta Logo" width={250} />
         <LandingNav />
       </RBox>
-      <h2>
+      <h2 style={{
+        paddingTop: '1rem',
+        paddingBottom: '1rem'
+      }}>
         A fast, secure and realiable way of making realstate transactions
         globally
       </h2>
