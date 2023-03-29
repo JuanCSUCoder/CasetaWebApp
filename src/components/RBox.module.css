@@ -12,4 +12,8 @@
         justify-content: flex-start;
         gap: 2rem;
     }
+
+    .space {
+        justify-content: space-between;
+    }
 }
