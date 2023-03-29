@@ -1,0 +1,15 @@
+.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+    .responsive {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+}
