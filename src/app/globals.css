@@ -34,3 +34,9 @@ input:focus {
     color: white;
     font-style: italic;
 }
+
+@media screen and (min-width: 2000px) {
+    body {
+        font-size: 32px;
+    }
+}
