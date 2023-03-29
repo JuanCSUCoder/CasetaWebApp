@@ -12,6 +12,7 @@ import LandingNav from '@/components/LandingNav'
 import HBox from '@/components/HBox'
 import Block from '@/components/Block'
 import RBox from '@/components/RBox'
+import FeatureIcon from '@/components/FeatureIcon'
 
 const roboto = Roboto({
   weight: "400",
@@ -39,7 +40,7 @@ export default function Home() {
               transparent and independent from private or government databases
             </p>
           </div>
-          <Image src={solanaLogo} alt="Solana Blockchain Logo" width={400} />
+          <FeatureIcon src={solanaLogo} alt="Solana Blockchain Logo" />
         </RBox>
       </Block>
       <Block page>
@@ -51,7 +52,8 @@ export default function Home() {
               own. You are in full control of them.
             </p>
             <p className={styles.desc}>
-              Assets are never transfered if sale-contract conditions are not met.
+              Assets are never transfered if sale-contract conditions are not
+              met.
             </p>
           </div>
           <BiKey size={200} />
