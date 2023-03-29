@@ -12,6 +12,7 @@ import LandingNav from '@/components/LandingNav'
 import HBox from '@/components/HBox'
 import Block from '@/components/Block'
 import RBox from '@/components/RBox'
+import FeatureIcon from '@/components/FeatureIcon'
 
 const roboto = Roboto({
   weight: "400",
@@ -26,12 +27,15 @@ export default function Home() {
         <Image src={logo} alt="Caseta Logo" width={250} />
         <LandingNav />
       </RBox>
-      <h2>
+      <h2 style={{
+        paddingTop: '1rem',
+        paddingBottom: '1rem'
+      }}>
         A fast, secure and realiable way of making realstate transactions
         globally
       </h2>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div id="features">
             <h1>Hosted on Blockchain</h1>
             <p className={styles.desc}>
@@ -39,11 +43,11 @@ export default function Home() {
               transparent and independent from private or government databases
             </p>
           </div>
-          <Image src={solanaLogo} alt="Solana Blockchain Logo" width={400} />
-        </HBox>
+          <FeatureIcon src={solanaLogo} alt="Solana Blockchain Logo" />
+        </RBox>
       </Block>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div>
             <h1>Improved Security with Decentralization</h1>
             <p className={styles.desc}>
@@ -51,14 +55,15 @@ export default function Home() {
               own. You are in full control of them.
             </p>
             <p className={styles.desc}>
-              Assets are never transfered if sale-contract conditions are not met.
+              Assets are never transfered if sale-contract conditions are not
+              met.
             </p>
           </div>
           <BiKey size={200} />
-        </HBox>
+        </RBox>
       </Block>
       <Block page>
-        <HBox spaced>
+        <RBox spaced>
           <div>
             <h1>Just Fast Transactions</h1>
             <p className={styles.desc}>
@@ -67,7 +72,7 @@ export default function Home() {
             </p>
           </div>
           <HiLightningBolt size={200} />
-        </HBox>
+        </RBox>
       </Block>
       <Block>
         <h1
