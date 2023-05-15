@@ -66,6 +66,8 @@ export default function Home() {
               style={{
                 margin: 0,
               }}
+              link="https://solana.com/solana-whitepaper.pdf"
+              blank
             />
           </div>
           <BiKey size={150} />
