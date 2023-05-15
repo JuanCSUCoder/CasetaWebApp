@@ -8,8 +8,12 @@
 }
 
 .button {
-    background-color: white;
-    font-weight: bold;
-    color: #e72425ff;
-    cursor: pointer;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 530px) {
+    .button {
+        margin-left: 1rem;
+    }
 }
