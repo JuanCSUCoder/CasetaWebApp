@@ -16,11 +16,20 @@ export default function Button({
   link?: string;
   blank?: boolean;
 }) {
-  const base_style = {
+  const base_style: CSSProperties = {
     backgroundColor: "white",
+    fontFamily: "Arial",
     fontWeight: "bold",
     color: "#e72425ff",
-    cursor: "pointer",
+		cursor: "pointer",
+    border: "solid 2px #ffffffff",
+    borderRadius: "50px",
+    padding: "0.5rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    margin: "0.5rem",
+    textDecoration: "none",
+    display: "inline-block"
   };
 
   return link ? (
