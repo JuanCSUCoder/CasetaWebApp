@@ -9,15 +9,17 @@ export default function FeatureIcon({
   alt: string;
 }) {
   return (
-		<div className={styles.responsive_img}>
-			<Image
-        src={src}
-				alt={alt}
-				className={styles.img}
-				fill
-        sizes="(max-width: 750px) 70px,
+    <div className={styles.holder}>
+      <div className={styles.responsive_img}>
+        <Image
+          src={src}
+          alt={alt}
+          className={styles.img}
+          fill
+          sizes="(max-width: 750px) 70px,
             400px"
-      />
+        />
+      </div>
     </div>
   );
 }

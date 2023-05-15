@@ -6,12 +6,19 @@ import LandingNav from "@/components/LandingNav";
 
 import logo from "@/assets/logo_v1_transparent.png";
 import "./globals.css";
+import Block from "@/components/Block";
 
 const roboto = Roboto({
   weight: "400",
   style: "normal",
   subsets: ["latin"],
 });
+
+const robold = Roboto({
+  weight: "700",
+  style: "normal",
+  subsets: ["latin"]
+})
 
 export const metadata = {
   title: "CASETA - Fast & Secure Realstate Transactions",
@@ -31,6 +38,8 @@ export default function RootLayout({
           <RBox
             style={{
               alignItems: "center",
+                paddingLeft: "3rem",
+                paddingRight: "3rem"
             }}
           >
             <Image src={logo} alt="Caseta Logo" width={250} />
@@ -40,6 +49,25 @@ export default function RootLayout({
           </RBox>
         </header>
         {children}
+        <footer
+          style={{
+            backgroundColor: "white",
+            color: "black",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
+          }}
+        >
+          <p
+            className={robold.className}
+            style={{
+              textAlign: "center",
+              padding: "3rem",
+            }}
+          >
+            Todos los Derechos Reservados © Caseta 2023
+          </p>
+        </footer>
       </body>
     </html>
   );

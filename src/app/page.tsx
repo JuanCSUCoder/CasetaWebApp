@@ -19,13 +19,17 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <main className={[styles.main, roboto.className].join(" ")}>
-      <h2 style={{
-        paddingTop: '1rem',
-        paddingBottom: '1rem'
-      }}>
-        A fast, secure and realiable way of making realstate transactions
-        globally
-      </h2>
+      <Block>
+        <h2
+          style={{
+            paddingTop: "1rem",
+            paddingBottom: "1rem",
+          }}
+        >
+          A fast, secure and realiable way of making realstate transactions
+          globally
+        </h2>
+      </Block>
       <Block page>
         <RBox spaced>
           <div id="features">
@@ -51,7 +55,7 @@ export default function Home() {
               met.
             </p>
           </div>
-          <BiKey size={200} />
+          <BiKey size={100} />
         </RBox>
       </Block>
       <Block page>
@@ -63,7 +67,7 @@ export default function Home() {
               and your sale is made.
             </p>
           </div>
-          <HiLightningBolt size={200} />
+          <HiLightningBolt size={100} />
         </RBox>
       </Block>
       <Block>
