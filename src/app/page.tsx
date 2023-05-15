@@ -55,7 +55,7 @@ export default function Home() {
               met.
             </p>
           </div>
-          <BiKey size={100} />
+          <BiKey size={150} />
         </RBox>
       </Block>
       <Block page>
@@ -67,7 +67,7 @@ export default function Home() {
               and your sale is made.
             </p>
           </div>
-          <HiLightningBolt size={100} />
+          <HiLightningBolt size={150} />
         </RBox>
       </Block>
       <Block>
