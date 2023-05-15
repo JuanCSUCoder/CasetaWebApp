@@ -9,6 +9,7 @@ import PreSignUp from '@/components/PreSignUp'
 import Block from '@/components/Block'
 import RBox from '@/components/RBox'
 import FeatureIcon from '@/components/FeatureIcon'
+import Button from '@/components/Button'
 
 const roboto = Roboto({
   weight: "400",
@@ -38,6 +39,12 @@ export default function Home() {
               Everything is hosted on the blockchain, so all the information is
               transparent and independent from private or government databases
             </p>
+            <Button
+              value="Try our Smart Contract"
+              style={{
+                margin: 0,
+              }}
+            />
           </div>
           <FeatureIcon src={solanaLogo} alt="Solana Blockchain Logo" />
         </RBox>
@@ -54,6 +61,12 @@ export default function Home() {
               Assets are never transfered if sale-contract conditions are not
               met.
             </p>
+            <Button
+              value="Check Proof-of-History Whitepaper"
+              style={{
+                margin: 0,
+              }}
+            />
           </div>
           <BiKey size={150} />
         </RBox>
@@ -66,6 +79,12 @@ export default function Home() {
               No need for waiting at government institutions. Just some clicks
               and your sale is made.
             </p>
+            <Button
+              value="Start Selling"
+              style={{
+                margin: 0,
+              }}
+            />
           </div>
           <HiLightningBolt size={150} />
         </RBox>
@@ -77,7 +96,7 @@ export default function Home() {
             marginBottom: 20,
           }}
         >
-          Get Notified When is Ready!
+          Get Updates of New Features!
         </h1>
         <PreSignUp />
       </Block>
