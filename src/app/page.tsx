@@ -1,15 +1,11 @@
-import Image from 'next/image'
 import { Roboto } from 'next/font/google'
 
 import styles from './page.module.css'
-import logo from '@/assets/logo_v1_transparent.png'
 import solanaLogo from '@/assets/solanaLogo.png'
 import { BiKey } from 'react-icons/bi'
 import { HiLightningBolt } from 'react-icons/hi'
 
 import PreSignUp from '@/components/PreSignUp'
-import LandingNav from '@/components/LandingNav'
-import HBox from '@/components/HBox'
 import Block from '@/components/Block'
 import RBox from '@/components/RBox'
 import FeatureIcon from '@/components/FeatureIcon'
@@ -23,10 +19,6 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <main className={[styles.main, roboto.className].join(" ")}>
-      <RBox>
-        <Image src={logo} alt="Caseta Logo" width={250} />
-        <LandingNav />
-      </RBox>
       <h2 style={{
         paddingTop: '1rem',
         paddingBottom: '1rem'
