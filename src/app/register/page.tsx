@@ -34,10 +34,7 @@ export default function RegisterPage() {
         the process of using Caseta for your real estate transactions.
       </p>
 
-      <form
-        className={roboto.className + " " + styles.form}
-        action="/success"
-      >
+      <form className={roboto.className + " " + styles.form} action="/success">
         <section>
           <h2>Property Information:</h2>
 
@@ -73,6 +70,14 @@ export default function RegisterPage() {
 
         <section>
           <h2>Owner Information:</h2>
+          <label htmlFor="nip">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className={styles.emailbox}
+          />
+
           <label htmlFor="nip">ID Number:</label>
           <input
             type="number"
@@ -95,10 +100,14 @@ export default function RegisterPage() {
             className={styles.emailbox}
           />
 
-          <Button value="Send Request" submit style={{
-            margin: 0,
-            marginTop: "1rem",
-          }} />
+          <Button
+            value="Send Request"
+            submit
+            style={{
+              margin: 0,
+              marginTop: "1rem",
+            }}
+          />
         </section>
       </form>
     </>
