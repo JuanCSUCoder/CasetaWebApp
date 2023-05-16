@@ -68,7 +68,7 @@ export default function RootLayout({
               padding: "3rem",
             }}
           >
-            Todos los Derechos Reservados © Caseta 2023
+            All Rights Reserved © Caseta 2023
           </p>
         </footer>
       </body>
