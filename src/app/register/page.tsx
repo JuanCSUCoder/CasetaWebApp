@@ -36,7 +36,7 @@ export default function RegisterPage() {
 
       <form
         className={roboto.className + " " + styles.form}
-        action="/api/register"
+        action="/success"
       >
         <section>
           <h2>Property Information:</h2>
