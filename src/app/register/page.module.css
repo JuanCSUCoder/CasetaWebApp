@@ -1,0 +1,34 @@
+.emailbox {
+    width: 20rem;
+    margin: 0;
+}
+
+.emailbox:hover {
+    background-color: rgba(255, 255, 255, 0.218);
+}
+
+.form {
+    display: flex;
+    color: white;
+    flex-direction: row;
+}
+
+.form > section {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.form > section > * {
+    margin-top: 1rem;
+}
+
+.form > label {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .form {
+        flex-direction: column;
+    }
+}
