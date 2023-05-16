@@ -7,6 +7,7 @@ import LandingNav from "@/components/LandingNav";
 import logo from "@/assets/logo_v1_transparent.png";
 import "./globals.css";
 import Block from "@/components/Block";
+import Link from "next/link";
 
 const roboto = Roboto({
   weight: "400",
@@ -38,11 +39,13 @@ export default function RootLayout({
           <RBox
             style={{
               alignItems: "center",
-                paddingLeft: "3rem",
-                paddingRight: "3rem"
+              paddingLeft: "3rem",
+              paddingRight: "3rem",
             }}
           >
-            <Image src={logo} alt="Caseta Logo" width={250} />
+            <Link href="/">
+              <Image src={logo} alt="Caseta Logo" width={250} />
+            </Link>
             <div className={roboto.className}>
               <LandingNav />
             </div>

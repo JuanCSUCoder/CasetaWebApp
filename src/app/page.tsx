@@ -44,6 +44,7 @@ export default function Home() {
               style={{
                 margin: 0,
               }}
+              link="/register"
             />
           </div>
           <FeatureIcon src={solanaLogo} alt="Solana Blockchain Logo" />
@@ -86,6 +87,7 @@ export default function Home() {
               style={{
                 margin: 0,
               }}
+              link="/register"
             />
           </div>
           <HiLightningBolt size={150} />

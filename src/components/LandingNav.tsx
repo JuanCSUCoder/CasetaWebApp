@@ -12,7 +12,7 @@ export default function LandingNav() {
         <li>
           <a href="#sign">Sign Up</a>
         </li>
-        <Button value="Register RealState" />
+        <Button value="Register RealState" link="/register" />
       </ul>
     </nav>
   );
