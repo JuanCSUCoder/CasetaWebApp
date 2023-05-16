@@ -7,7 +7,8 @@
 body {
     background-color: #e72425ff;
     
-    padding: 3rem;
+    /* padding: 3rem; */
+    padding-top: 3rem;
     
     width: 100%;
     min-height: 100vh;
@@ -33,6 +34,10 @@ input:focus {
 ::placeholder {
     color: white;
     font-style: italic;
+}
+
+#features {
+    flex-grow: 2;
 }
 
 @media screen and (min-width: 2000px) {

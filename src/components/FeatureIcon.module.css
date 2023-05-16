@@ -1,7 +1,15 @@
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
 .responsive_img {
     display: block;
-    width: 14rem;
-    height: 3rem;
+    width: 15rem;
+    height: 5rem;
     overflow: hidden;
     position: relative;
 }
@@ -13,5 +21,11 @@
 @media screen and (min-width: 750px) {
     .responsive_img {
         width: 25rem;
+    }
+
+    .holder {
+        justify-content: flex-end;
+        width: auto;
+        flex-grow: 1;
     }
 }

@@ -8,13 +8,13 @@
 }
 
 .page {
-    
+    align-items: center;
     justify-content: center;
 }
 
 @media screen and (min-width: 750px) {
     .b {
         padding: 2rem;
-        min-height: 60vh;
+        /* min-height: 60vh; */
     }
 }

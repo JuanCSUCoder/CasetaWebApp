@@ -1,18 +1,15 @@
-import Image from 'next/image'
 import { Roboto } from 'next/font/google'
 
 import styles from './page.module.css'
-import logo from '@/assets/logo_v1_transparent.png'
 import solanaLogo from '@/assets/solanaLogo.png'
 import { BiKey } from 'react-icons/bi'
 import { HiLightningBolt } from 'react-icons/hi'
 
 import PreSignUp from '@/components/PreSignUp'
-import LandingNav from '@/components/LandingNav'
-import HBox from '@/components/HBox'
 import Block from '@/components/Block'
 import RBox from '@/components/RBox'
 import FeatureIcon from '@/components/FeatureIcon'
+import Button from '@/components/Button'
 
 const roboto = Roboto({
   weight: "400",
@@ -23,17 +20,17 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <main className={[styles.main, roboto.className].join(" ")}>
-      <RBox>
-        <Image src={logo} alt="Caseta Logo" width={250} />
-        <LandingNav />
-      </RBox>
-      <h2 style={{
-        paddingTop: '1rem',
-        paddingBottom: '1rem'
-      }}>
-        A fast, secure and realiable way of making realstate transactions
-        globally
-      </h2>
+      <Block>
+        <h2
+          style={{
+            paddingTop: "1rem",
+            paddingBottom: "1rem",
+          }}
+        >
+          A fast, secure and realiable way of making realstate transactions
+          globally
+        </h2>
+      </Block>
       <Block page>
         <RBox spaced>
           <div id="features">
@@ -42,6 +39,13 @@ export default function Home() {
               Everything is hosted on the blockchain, so all the information is
               transparent and independent from private or government databases
             </p>
+            <Button
+              value="Try our Smart Contract"
+              style={{
+                margin: 0,
+              }}
+              link="/register"
+            />
           </div>
           <FeatureIcon src={solanaLogo} alt="Solana Blockchain Logo" />
         </RBox>
@@ -58,8 +62,16 @@ export default function Home() {
               Assets are never transfered if sale-contract conditions are not
               met.
             </p>
+            <Button
+              value="Check Proof-of-History Whitepaper"
+              style={{
+                margin: 0,
+              }}
+              link="https://solana.com/solana-whitepaper.pdf"
+              blank
+            />
           </div>
-          <BiKey size={200} />
+          <BiKey size={150} />
         </RBox>
       </Block>
       <Block page>
@@ -70,8 +82,15 @@ export default function Home() {
               No need for waiting at government institutions. Just some clicks
               and your sale is made.
             </p>
+            <Button
+              value="Start Selling"
+              style={{
+                margin: 0,
+              }}
+              link="/register"
+            />
           </div>
-          <HiLightningBolt size={200} />
+          <HiLightningBolt size={150} />
         </RBox>
       </Block>
       <Block>
@@ -81,7 +100,7 @@ export default function Home() {
             marginBottom: 20,
           }}
         >
-          Get Notified When is Ready!
+          Get Updates of New Features!
         </h1>
         <PreSignUp />
       </Block>

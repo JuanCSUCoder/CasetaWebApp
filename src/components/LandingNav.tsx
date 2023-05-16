@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./Button";
 import styles from "./LandingNav.module.css";
 
 export default function LandingNav() {
@@ -8,9 +9,7 @@ export default function LandingNav() {
         <li>
           <a href="#features">Features</a>
         </li>
-        <li>
-          <a href="#sign">Sign Up</a>
-        </li>
+        <Button value="Register RealState" link="/register" />
       </ul>
     </nav>
   );
