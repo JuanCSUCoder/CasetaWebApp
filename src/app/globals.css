@@ -51,6 +51,9 @@ select:focus {
 
 .wallet-adapter-button {
     width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    color: #e72425ff;
 }
 
 @media screen and (min-width: 2000px) {
