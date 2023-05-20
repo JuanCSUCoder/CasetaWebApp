@@ -1,6 +1,9 @@
+"use client";
+
 import styles from "./page.module.css";
 import { Roboto } from "next/font/google";
 import Button from "@/components/Button";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const roboto = Roboto({
   weight: "400",
@@ -166,6 +169,8 @@ export default function RegisterPage() {
             className={styles.emailbox}
             required
           />
+
+          <WalletMultiButton />
 
           <Button
             value="Send Request"
