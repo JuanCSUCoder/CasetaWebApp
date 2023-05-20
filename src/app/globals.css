@@ -49,6 +49,10 @@ select:focus {
     flex-grow: 2;
 }
 
+.wallet-adapter-button {
+    width: 100%;
+}
+
 @media screen and (min-width: 2000px) {
     html {
         font-size: 32px;
