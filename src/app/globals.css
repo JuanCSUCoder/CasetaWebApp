@@ -56,6 +56,12 @@ select:focus {
     color: #e72425ff;
 }
 
+.wallet-adapter-modal-list > li > button {
+    color: white;
+    background-color: #10141f;
+
+}
+
 @media screen and (min-width: 2000px) {
     html {
         font-size: 32px;
