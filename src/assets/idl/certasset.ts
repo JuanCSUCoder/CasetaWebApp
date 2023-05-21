@@ -113,3 +113,5 @@ const certasset_idl: anchor.Idl = {
     address: "spxGCXzMEKBuYAsCd5wcAUD2mz8745cYZD9D8xXVgtg",
   },
 };
+
+export default certasset_idl
