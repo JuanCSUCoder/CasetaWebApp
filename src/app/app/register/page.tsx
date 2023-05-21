@@ -9,7 +9,7 @@ import certasset_idl from "../../../assets/idl/certasset"
 import * as anchor from "@coral-xyz/anchor"
 import { PublicKey } from "@solana/web3.js";
 import { FormEvent, useMemo } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const WalletDisconnectButtonDynamic = dynamic(
   async () =>
