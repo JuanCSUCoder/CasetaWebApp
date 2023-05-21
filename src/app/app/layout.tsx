@@ -13,7 +13,7 @@ import "../globals.css"
 
 export default function WalletLayout({ children }: { children: ReactNode }) {
     const network = WalletAdapterNetwork.Devnet;
-    const endpoint = useMemo(() => clusterApiUrl(network), [network])
+    const endpoint = "http://127.0.0.1:8899";
 
     const wallets = useMemo(() => [
         new BraveWalletAdapter(),

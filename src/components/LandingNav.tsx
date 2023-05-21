@@ -9,7 +9,7 @@ export default function LandingNav() {
         <li>
           <a href="#features">Features</a>
         </li>
-        <Button value="Register RealState" link="/register" />
+        <Button value="Register RealState" link="/app/register" />
       </ul>
     </nav>
   );

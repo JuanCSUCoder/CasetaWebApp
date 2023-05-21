@@ -4,6 +4,12 @@ import styles from "./page.module.css";
 import { Roboto } from "next/font/google";
 import Button from "@/components/Button";
 import dynamic from "next/dynamic";
+import { useAnchorWallet, useConnection, useWallet } from "@solana/wallet-adapter-react";
+import certasset_idl from "../../../assets/idl/certasset"
+import * as anchor from "@coral-xyz/anchor"
+import { PublicKey } from "@solana/web3.js";
+import { FormEvent, useMemo } from "react";
+import { useRouter } from "next/navigation";
 
 const WalletDisconnectButtonDynamic = dynamic(
   async () =>
@@ -24,6 +30,42 @@ const roboto = Roboto({
 });
 
 export default function RegisterPage() {
+  const anchor_wallet = useAnchorWallet()
+  const { signMessage } = useWallet()
+  const { connection } = useConnection()
+
+  const { push } = useRouter()
+
+  const program = useMemo(() => {
+    if (anchor_wallet) {
+      const provider = new anchor.AnchorProvider(
+        connection,
+        anchor_wallet,
+        anchor.AnchorProvider.defaultOptions()
+      );
+
+      const programId = new PublicKey(
+        "spxGCXzMEKBuYAsCd5wcAUD2mz8745cYZD9D8xXVgtg"
+      );
+      const program = new anchor.Program(certasset_idl, programId, provider);
+
+      return program
+    }
+  }, [anchor_wallet, connection])
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    let form_data = e.target as any
+
+    if (signMessage) {
+      let msg = "I, " + form_data["first-name"].value + " declare that " + form_data["pname"].value + " is mine."
+      const signed_msg = await signMessage(anchor.utils.bytes.utf8.encode(msg));
+
+      push("/success")
+    }
+  }
+
   return (
     <>
       <h1
@@ -49,7 +91,7 @@ export default function RegisterPage() {
         the process of using Caseta for your real estate transactions.
       </p>
 
-      <form className={roboto.className + " " + styles.form} action="/success">
+      <form className={roboto.className + " " + styles.form} onSubmit={handleSubmit}>
         <section>
           <h2>Property Information</h2>
 
@@ -181,6 +223,19 @@ export default function RegisterPage() {
             className={styles.emailbox}
             required
           />
+
+          <label htmlFor="wallet">Wallet:</label>
+
+          <p style={{
+            maxWidth: "320px",
+            textOverflow: "ellipsis",
+            overflow: "hidden",
+            fontWeight: "bold",
+            textDecoration: "underline",
+            cursor: "pointer"
+          }}>
+            {anchor_wallet ? anchor_wallet.publicKey.toString() : ""}
+          </p>
 
           <WalletMultiButtonDynamic />
           <WalletDisconnectButtonDynamic />

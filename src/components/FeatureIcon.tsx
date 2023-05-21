@@ -24,6 +24,7 @@ export default function FeatureIcon(props: ImgIcon | ComponentIcon) {
           src={src}
           alt={alt}
           className={styles.img}
+          placeholder="blur"
           fill
           sizes="(max-width: 750px) 70px,
             400px"
