@@ -1,6 +1,21 @@
+"use client";
+
 import styles from "./page.module.css";
 import { Roboto } from "next/font/google";
 import Button from "@/components/Button";
+import dynamic from "next/dynamic";
+
+const WalletDisconnectButtonDynamic = dynamic(
+  async () =>
+    (await import("@solana/wallet-adapter-react-ui")).WalletDisconnectButton,
+  { ssr: false }
+);
+const WalletMultiButtonDynamic = dynamic(
+  async () =>
+    (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
+
 
 const roboto = Roboto({
   weight: "400",
@@ -166,6 +181,9 @@ export default function RegisterPage() {
             className={styles.emailbox}
             required
           />
+
+          <WalletMultiButtonDynamic />
+          <WalletDisconnectButtonDynamic />
 
           <Button
             value="Send Request"
