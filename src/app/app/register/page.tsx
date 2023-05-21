@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { Roboto } from "next/font/google";
 import Button from "@/components/Button";
 import dynamic from "next/dynamic";
+import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
 
 const WalletDisconnectButtonDynamic = dynamic(
   async () =>
@@ -24,6 +25,11 @@ const roboto = Roboto({
 });
 
 export default function RegisterPage() {
+  const wallet = useAnchorWallet()
+  const connection = useConnection()
+
+  console.log(wallet)
+
   return (
     <>
       <h1
@@ -181,6 +187,19 @@ export default function RegisterPage() {
             className={styles.emailbox}
             required
           />
+
+          <label htmlFor="wallet">Wallet:</label>
+
+          <p style={{
+            maxWidth: "320px",
+            textOverflow: "ellipsis",
+            overflow: "hidden",
+            fontWeight: "bold",
+            textDecoration: "underline",
+            cursor: "pointer"
+          }}>
+            {wallet ? wallet.publicKey.toString() : ""}
+          </p>
 
           <WalletMultiButtonDynamic />
           <WalletDisconnectButtonDynamic />
