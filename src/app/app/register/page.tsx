@@ -9,6 +9,7 @@ import certasset_idl from "../../../assets/idl/certasset"
 import * as anchor from "@coral-xyz/anchor"
 import { PublicKey } from "@solana/web3.js";
 import { FormEvent, useMemo } from "react";
+import { useRouter } from "next/router";
 
 const WalletDisconnectButtonDynamic = dynamic(
   async () =>
@@ -30,8 +31,11 @@ const roboto = Roboto({
 
 export default function RegisterPage() {
   const anchor_wallet = useAnchorWallet()
-  const { wallet, signMessage } = useWallet()
+  const { signMessage } = useWallet()
   const { connection } = useConnection()
+
+  const { push } = useRouter()
+
   const program = useMemo(() => {
     if (anchor_wallet) {
       const provider = new anchor.AnchorProvider(
@@ -51,9 +55,15 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log(program?.methods)
-    const tx = await program?.methods.ping().rpc()
-    alert("Transaction: " + tx)
+
+    let form_data = e.target as any
+
+    if (signMessage) {
+      let msg = "I, " + form_data["first-name"].value + " declare that " + form_data["pname"].value + " is mine."
+      const signed_msg = await signMessage(anchor.utils.bytes.utf8.encode(msg));
+
+      push("/success")
+    }
   }
 
   return (
