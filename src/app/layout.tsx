@@ -44,7 +44,7 @@ export default function RootLayout({
             }}
           >
             <Link href="/">
-              <Image src={logo} alt="Caseta Logo" width={250} />
+              <Image placeholder="blur" src={logo} alt="Caseta Logo" width={250} />
             </Link>
             <div className={roboto.className}>
               <LandingNav />
