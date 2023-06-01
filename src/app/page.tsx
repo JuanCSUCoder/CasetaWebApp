@@ -52,6 +52,7 @@ export default function Home() {
             title="Bienvenido a Caseta - ¿Qué es? ¿Para qué sirve?"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            className="hide-mobile"
           ></iframe>
         </RBox>
       </Block>
