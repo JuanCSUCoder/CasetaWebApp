@@ -32,6 +32,30 @@ export default function Home() {
         </h2>
       </Block>
       <Block page>
+        <RBox>
+          <div id="features">
+            <h1>What is Caseta?</h1>
+            <p className={styles.desc}></p>
+            <Button
+              value="Watch in YouTube"
+              style={{
+                margin: 0,
+              }}
+              link="https://youtu.be/bx7t_AUUeZo"
+              blank
+            />
+          </div>
+          <iframe
+            width="800"
+            height="450"
+            src="https://www.youtube.com/embed/bx7t_AUUeZo"
+            title="Bienvenido a Caseta - ¿Qué es? ¿Para qué sirve?"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </RBox>
+      </Block>
+      <Block page>
         <RBox spaced>
           <div id="features">
             <h1>Hosted on Blockchain</h1>
