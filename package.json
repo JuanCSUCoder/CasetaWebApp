@@ -20,6 +20,7 @@
     "@types/react-dom": "18.0.11",
     "encoding": "^0.1.13",
     "next": "13.4.3",
+    "pino-pretty": "^10.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
